@@ -16,7 +16,7 @@ public class DisplayTime
 	
 				if ( choice == 1)
 				{*/
-					ClockDisplay clock = new ClockDisplay();
+					ClockDisplay clock = new ClockDisplay(12, 58, 58);
 					clock.timer();
 				/*}
 	

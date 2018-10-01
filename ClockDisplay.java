@@ -9,18 +9,18 @@ public class ClockDisplay
 	
 	public ClockDisplay()
 	{
-		Hours = new NumberDisplay(24);
-		Minutes = new NumberDisplay(60);
-		Seconds = new NumberDisplay(60);
+		Hours = new NumberDisplay(14);
+		Minutes = new NumberDisplay(59);
+		Seconds = new NumberDisplay(59);
 		
 		updateTime();
 	}
 	
 	public ClockDisplay(int hour, int minute, int second)
 	{
-		Hours = new NumberDisplay(24);
-		Minutes = new NumberDisplay(60);
-		Seconds = new NumberDisplay(60);
+		Hours = new NumberDisplay(14);
+		Minutes = new NumberDisplay(59);
+		Seconds = new NumberDisplay(59);
 		
 		setTime(hour, minute, second);
 	}
@@ -36,8 +36,13 @@ public class ClockDisplay
 	        	if (Minutes.getValue() == 0)
 	        	{
 	        		Hours.tick();
-	        	}
-	    }
+	        		
+	        		if (Hours.getValue() == 0)
+	        		{
+	        			Hours.tick();
+	        		}
+	        	}	
+	    }		
 	        
 	    updateTime();
 	 }
