@@ -62,10 +62,4 @@ public class ClockDisplay
 	        System.out.println(displayString);
 	 }
 	
-	public static void main(String[] args) 
-	{
-		ClockDisplay clock = new ClockDisplay();
-        clock.timer();
-	}
-	
 }

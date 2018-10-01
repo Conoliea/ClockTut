@@ -11,6 +11,11 @@ public class NumberDisplay
 		limit = timeLimit;
 	}
 	
+	public void tick()
+    {
+        value = (value + 1);
+    }
+	
 	public int getValue()
 	{
 		return(value);
@@ -31,9 +36,4 @@ public class NumberDisplay
 			value = newValue;
 		}
 	}
-	
-	public void tick()
-    {
-        value = (value + 1) % limit;
-    }
 }
