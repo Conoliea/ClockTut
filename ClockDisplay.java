@@ -77,7 +77,7 @@ public class ClockDisplay
 		        System.out.println(displayString);
 		 	}
 		 	
-		 	else if (Hours.getValue() >= 13)
+		 	else if (Hours.getValue() > 12 && Hours.getValue() < 24 )
 		 	{
 		 		displayString = Hours.getDisplayValue() + ":" + Minutes.getDisplayValue() + ":" + Seconds.getDisplayValue() + " pm";
 		        System.out.println(displayString);
