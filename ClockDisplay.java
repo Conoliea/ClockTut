@@ -20,7 +20,7 @@ public class ClockDisplay
 	// ClockDisplay Constructor
 	public ClockDisplay(int hour, int minute, int second)
 	{
-		Hours = new NumberDisplay(13);
+		Hours = new NumberDisplay(24);
 		Minutes = new NumberDisplay(60);
 		Seconds = new NumberDisplay(60);
 		
@@ -67,11 +67,21 @@ public class ClockDisplay
 		return displayString;
 	}
 	
-	//this shows the overall time displayed
+	//this shows the overall time 
 	 private void updateTime() 
 	 {
-	        displayString = Hours.getDisplayValue() + ":" + Minutes.getDisplayValue() + ":" + Seconds.getDisplayValue();
-	        System.out.println(displayString);
+		 
+		 	if(Hours.getValue() < 12)
+		 	{
+		 		displayString = Hours.getDisplayValue() + ":" + Minutes.getDisplayValue() + ":" + Seconds.getDisplayValue() + " am";
+		        System.out.println(displayString);
+		 	}
+		 	
+		 	else if (Hours.getValue() >= 13)
+		 	{
+		 		displayString = Hours.getDisplayValue() + ":" + Minutes.getDisplayValue() + ":" + Seconds.getDisplayValue() + " pm";
+		        System.out.println(displayString);
+		 	}
 	 }
 	
 }
